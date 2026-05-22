@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Booking Records</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+    <div class="logo">RoomOps Pro</div>
+
+</div>
+
+<h1 class="page-title">Customer Booking Records</h1>
+
+<div class="table-container">
+
+<table>
+
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Room</th>
+    </tr>
+
+    {% for booking in bookings %}
+
+    <tr>
+
+        <td>{{ booking.name }}</td>
+
+        <td>{{ booking.email }}</td>
+
+        <td>{{ booking.phone }}</td>
+
+        <td>{{ booking.room }}</td>
+
+    </tr>
+
+    {% endfor %}
+
+</table>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Hotel Bill</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+<div class="bill-box">
+
+    <h1>Booking Successful </h1>
+
+    <h2>Customer: {{ name }}</h2>
+
+    <h3>Room: {{ room }}</h3>
+
+    <h3>Total Days: {{ days }}</h3>
+
+    <h2>Total Bill: ₹{{ bill }}</h2>
+
+    <a href="/" class="btn">Go Home</a>
+
+</div>
+
+</body>
+</html>

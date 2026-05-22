@@ -1,0 +1,66 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Booking</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+
+<div class="navbar">
+
+    <div class="logo">RoomOps Pro</div>
+
+    <div class="nav-links">
+
+        <a href="/">Home</a>
+        <a href="/rooms/">Rooms</a>
+        <a href="/dashboard/">Dashboard</a>
+
+    </div>
+
+</div>
+
+<div class="booking-container">
+
+    <div class="booking-box">
+
+        <h1>Room Booking</h1>
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            <input type="text" name="name" placeholder="Full Name" required>
+
+            <input type="email" name="email" placeholder="Email" required>
+
+            <input type="text" name="phone" placeholder="Phone Number" required>
+
+            <input type="date" name="check_in" required>
+
+            <input type="date" name="check_out" required>
+
+            <select name="room">
+
+                <option>Deluxe Room</option>
+                <option>Premium Room</option>
+                <option>Suite Room</option>
+
+            </select>
+
+            <button type="submit">Book Now</button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>

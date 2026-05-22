@@ -1,0 +1,388 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>RoomOps Pro</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<section class="hero">
+
+    <div class="overlay">
+
+        <nav class="navbar">
+
+            <div class="logo">
+                RoomOps Pro
+            </div>
+
+            <div class="contact-info">
+                ✉️ adityajhasusari@gmail.com
+            </div>
+
+            <div class="nav-links">
+
+                <a href="/">Home</a>
+                <a href="/rooms/">Rooms</a>
+                <a href="/booking/">Booking</a>
+                <a href="/dashboard/">Dashboard</a>
+                <a href="/login/">Admin Login</a>
+
+            </div>
+
+        </nav>
+
+        <div class="hero-content">
+
+            <span class="tag">
+                SMART HOTEL MANAGEMENT PLATFORM
+            </span>
+
+            <h1>
+                Simplify Hotel Operations <br>
+                With Smart Automation
+            </h1>
+
+            <p>
+
+                A modern full-stack hotel management platform
+                designed to manage bookings, billing,
+                room tracking, and customer records efficiently.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="/booking/" class="btn">
+                    Book Room
+                </a>
+
+                <a href="/dashboard/" class="btn-secondary">
+                    Explore Dashboard
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="features-section">
+
+    <h1 class="section-title">
+        Core Features
+    </h1>
+
+    <div class="features-grid">
+
+        <div class="feature-box">
+
+            <h2>Room Booking</h2>
+
+            <p>
+                Streamlined booking workflow with customer
+                information and automated room allocation.
+            </p>
+
+        </div>
+
+        <div class="feature-box">
+
+            <h2>Billing System</h2>
+
+            <p>
+                Dynamic billing calculation based on room type
+                and stay duration with automated invoice flow.
+            </p>
+
+        </div>
+
+        <div class="feature-box">
+
+            <h2>Admin Dashboard</h2>
+
+            <p>
+                Centralized dashboard to monitor bookings,
+                customers, hotel analytics and occupancy.
+            </p>
+
+        </div>
+
+        <div class="feature-box">
+
+            <h2>Customer Records</h2>
+
+            <p>
+                Secure customer record management with organized
+                booking history and contact tracking.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- STATS -->
+
+<section class="stats-section">
+
+    <div class="stat-card">
+
+        <h1>120+</h1>
+
+        <p>Luxury Rooms</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h1>500+</h1>
+
+        <p>Bookings Managed</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h1>99%</h1>
+
+        <p>Customer Satisfaction</p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h1>24/7</h1>
+
+        <p>Room Service</p>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about-section">
+
+    <div class="about-box">
+
+        <h1>Why RoomOps Pro?</h1>
+
+        <p>
+
+            RoomOps Pro is a modern hotel management solution
+            developed using Django, Python, HTML, CSS and SQLite.
+            The system is designed to simplify hotel workflows
+            through booking automation, billing management,
+            room tracking and centralized administration.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- LIVE ROOM STATUS -->
+
+<section class="live-rooms">
+
+    <h1 class="section-title">
+        Available Rooms Today
+    </h1>
+
+    <div class="room-live-grid">
+
+        {% for room in rooms %}
+
+        <div class="live-room-card">
+
+            <h2>{{ room.name }}</h2>
+
+            <h3>₹{{ room.price }}</h3>
+
+            <p>{{ room.status }}</p>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+<!-- TECHNOLOGIES -->
+
+<section class="tech-section">
+
+    <h1 class="section-title">
+        Technologies Used
+    </h1>
+
+    <div class="tech-grid">
+
+        <div class="tech-box">
+
+            <h2>Python</h2>
+
+            <p>Backend Programming Language</p>
+
+        </div>
+
+        <div class="tech-box">
+
+            <h2>Django</h2>
+
+            <p>Powerful Python Web Framework</p>
+
+        </div>
+
+        <div class="tech-box">
+
+            <h2>HTML & CSS</h2>
+
+            <p>Frontend User Interface Design</p>
+
+        </div>
+
+        <div class="tech-box">
+
+            <h2>SQLite</h2>
+
+            <p>Lightweight Database System</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CUSTOMER REVIEWS -->
+
+<section class="review-section">
+
+    <h1 class="section-title">
+        Customer Reviews
+    </h1>
+
+    <div class="review-grid">
+
+        <div class="review-card">
+
+            <h2>⭐⭐⭐⭐⭐</h2>
+
+            <p>
+                Excellent hotel management experience with
+                smooth booking and billing system.
+            </p>
+
+            <h3>- Rohan Jha</h3>
+
+        </div>
+
+        <div class="review-card">
+
+            <h2>⭐⭐⭐⭐⭐</h2>
+
+            <p>
+                Modern dashboard and very professional room
+                management platform.
+            </p>
+
+            <h3>- Aman Jha</h3>
+
+        </div>
+
+        <div class="review-card">
+
+            <h2>⭐⭐⭐⭐⭐</h2>
+
+            <p>
+                Fast room booking and secure customer
+                management system.
+            </p>
+
+            <h3>- Sanjeev Jha</h3>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- HOTEL SERVICES -->
+
+<section class="services-section">
+
+    <h1 class="section-title">
+        Hotel Services
+    </h1>
+
+    <div class="services-grid">
+
+        <div class="service-card">
+            Free WiFi
+        </div>
+
+        <div class="service-card">
+            Swimming Pool
+        </div>
+
+        <div class="service-card">
+            Spa & Wellness
+        </div>
+
+        <div class="service-card">
+            24/7 Room Service
+        </div>
+
+        <div class="service-card">
+            Parking Facility
+        </div>
+
+        <div class="service-card">
+            Luxury Restaurant
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h2>
+        RoomOps Pro © 2026
+    </h2>
+
+    <p>
+        Developed by Aditya Kumar Jha
+    </p>
+
+    <p>
+        Email: adityajhasusari@gmail.com
+    </p>
+
+    <p>
+        Django | Python | SQLite | HTML | CSS
+    </p>
+
+</footer>
+
+</body>
+</html>
