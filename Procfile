@@ -1,1 +1,1 @@
-web: gunicorn roomops.wsgi
+web: gunicorn roomops.wsgi:application
