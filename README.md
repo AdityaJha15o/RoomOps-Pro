@@ -231,4 +231,3 @@ Feel free to fork the repository and submit a pull request.
 
 RoomOps Pro was developed to demonstrate real-world hotel management workflows using Django. The project focuses on practical backend development, database management, deployment, and responsive frontend design while providing a complete hotel operation solution.
 
-If you found this project useful, don't forget to ⭐ star the repository.
