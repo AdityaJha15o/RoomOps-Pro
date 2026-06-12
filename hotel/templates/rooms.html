@@ -1,57 +1,62 @@
 {% load static %}
 
 <!DOCTYPE html>
+
 <html>
 <head>
 
-    <title>Rooms</title>
+```
+<title>Rooms</title>
 
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+```
 
 </head>
 
 <body>
 
-    <div class="navbar">
+```
+<div class="navbar">
 
-        <div class="logo">RoomOps Pro</div>
+    <div class="logo">RoomOps Pro</div>
 
-        <div>
-            <a href="/" style="color:white;">Home</a>
-        </div>
-
+    <div>
+        <a href="/" style="color:white;">Home</a>
     </div>
 
-    <div class="hero">
+</div>
 
-        <h1>Available Rooms</h1>
+<div class="hero">
 
+    <h1>Available Rooms</h1>
+
+</div>
+
+<div class="room-container">
+
+    <div class="room-card">
+        <h2>Deluxe Room</h2>
+        <p>AC | WiFi | TV</p>
+        <h3>₹2500 / Night</h3>
+        <a href="/booking/?room=Deluxe Room" class="btn">Book Now</a>
     </div>
 
-    <div class="room-container">
-
-        <div class="room-card">
-            <h2>Deluxe Room</h2>
-            <p>AC | WiFi | TV</p>
-            <h3>₹2500 / Night</h3>
-            <a href="#" class="btn">Book Now</a>
-        </div>
-
-        <div class="room-card">
-            <h2>Premium Room</h2>
-            <p>Luxury Bed | AC | WiFi</p>
-            <h3>₹4000 / Night</h3>
-            <a href="#" class="btn">Book Now</a>
-        </div>
-
-        <div class="room-card">
-            <h2>Suite Room</h2>
-            <p>Luxury Suite | Dinner | TV</p>
-            <h3>₹6500 / Night</h3>
-            <a href="#" class="btn">Book Now</a>
-        </div>
-
+    <div class="room-card">
+        <h2>Premium Room</h2>
+        <p>Luxury Bed | AC | WiFi</p>
+        <h3>₹4000 / Night</h3>
+        <a href="/booking/?room=Premium Room" class="btn">Book Now</a>
     </div>
+
+    <div class="room-card">
+        <h2>Suite Room</h2>
+        <p>Luxury Suite | Dinner | TV</p>
+        <h3>₹6500 / Night</h3>
+        <a href="/booking/?room=Suite Room" class="btn">Book Now</a>
+    </div>
+
+</div>
+```
 
 </body>
 </html>

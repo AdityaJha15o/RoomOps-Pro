@@ -1,12 +1,15 @@
 {% load static %}
 
 <!DOCTYPE html>
+
 <html>
 <head>
 
-    <title>Booking Records</title>
+```
+<title>Booking Records</title>
 
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+```
 
 </head>
 
@@ -14,40 +17,112 @@
 
 <div class="navbar">
 
-    <div class="logo">RoomOps Pro</div>
+```
+<div class="logo">RoomOps Pro</div>
+
+<div class="nav-links">
+
+    <a href="/dashboard/">Dashboard</a>
+    <a href="/customers/">Customers</a>
+    <a href="/logout/">Logout</a>
+
+</div>
+```
 
 </div>
 
 <h1 class="page-title">Customer Booking Records</h1>
 
+<form method="GET" style="text-align:center;margin-bottom:30px;">
+
+```
+<input
+    type="text"
+    name="q"
+    placeholder="Search Customer Name"
+    style="padding:12px;width:300px;border-radius:8px;border:none;">
+
+<button
+    type="submit"
+    class="btn">
+
+    Search
+
+</button>
+```
+
+</form>
+
 <div class="table-container">
 
 <table>
 
-    <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Phone</th>
-        <th>Room</th>
-    </tr>
+```
+<tr>
 
-    {% for booking in bookings %}
+    <th>Name</th>
+    <th>Room</th>
+    <th>Check In</th>
+    <th>Check Out</th>
+    <th>Total Bill</th>
+    <th>Action</th>
 
-    <tr>
+</tr>
 
-        <td>{{ booking.name }}</td>
+{% for booking in bookings %}
 
-        <td>{{ booking.email }}</td>
+<tr>
 
-        <td>{{ booking.phone }}</td>
+    <td>{{ booking.name }}</td>
+    <td>{{ booking.room }}</td>
+    <td>{{ booking.check_in }}</td>
+    <td>{{ booking.check_out }}</td>
+    <td>₹{{ booking.total_bill }}</td>
 
-        <td>{{ booking.room }}</td>
+    <td>
 
-    </tr>
+        <a
+        href="/delete-booking/{{ booking.id }}/"
+        class="btn">
 
-    {% endfor %}
+        Delete
+
+        </a>
+
+    </td>
+
+</tr>
+
+{% empty %}
+
+<tr>
+
+    <td colspan="6">
+
+        No Booking Records Found
+
+    </td>
+
+</tr>
+
+{% endfor %}
+```
 
 </table>
+
+</div>
+
+<div class="dashboard-container">
+
+```
+<div class="dashboard-card">
+
+    <h2>{{ bookings|length }}</h2>
+
+    <p>Total Booking Records</p>
+
+</div>
+```
 
 </div>
 

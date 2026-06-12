@@ -48,11 +48,19 @@
 
             <select name="room">
 
-                <option>Deluxe Room</option>
-                <option>Premium Room</option>
-                <option>Suite Room</option>
+                 <option {% if selected_room == "Deluxe Room" %}selected{% endif %}>
+                  Deluxe Room
+                  </option>
 
-            </select>
+    <option {% if selected_room == "Premium Room" %}selected{% endif %}>
+        Premium Room
+    </option>
+
+    <option {% if selected_room == "Suite Room" %}selected{% endif %}>
+        Suite Room
+    </option>
+
+</select>
 
             <button type="submit">Book Now</button>
 

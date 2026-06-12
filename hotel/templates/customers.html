@@ -1,0 +1,70 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Customers</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+    <div class="logo">RoomOps Pro</div>
+
+    <div class="nav-links">
+
+        <a href="/dashboard/">Dashboard</a>
+        <a href="/records/">Records</a>
+        <a href="/logout/">Logout</a>
+
+    </div>
+
+</div>
+
+<h1 class="page-title">Customer Management</h1>
+
+<div class="table-container">
+
+<table>
+
+    <tr>
+
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Address</th>
+
+    </tr>
+
+    {% for customer in customers %}
+
+    <tr>
+
+        <td>{{ customer.name }}</td>
+        <td>{{ customer.email }}</td>
+        <td>{{ customer.phone }}</td>
+        <td>{{ customer.address }}</td>
+
+    </tr>
+
+    {% empty %}
+
+    <tr>
+
+        <td colspan="4">No Customers Found</td>
+
+    </tr>
+
+    {% endfor %}
+
+</table>
+
+</div>
+
+</body>
+</html>
